@@ -4,7 +4,7 @@
   "adonis-version": "4.1.0",
   "description": "The fullstack application boilerplate for Adonisjs",
   "main": "index.js",
-  "endgines": {
+  "engines": {
     "node": "12.x",
     "npm": "6.x"
   },
