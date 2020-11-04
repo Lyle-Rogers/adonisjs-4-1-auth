@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <title>AdonisJS-4-1-Auth</title>
+</head>
+<body>
+  <nav class='navbar is-dark'>
+    <div class="container">
+      <div class="navbar-brand">
+        <a href="/" class="navbar-item">AdonisJs</a>
+        <button class="button navbar-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-end">
+          @loggedIn
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                {{ auth.user.username }}
+              </a>
+              <div class="navbar-dropdown">
+                <a href="/logout" class="navbar-item">Logout</a>
+              </div>
+            </div>
+          @else
+            <a href="/login" class="navbar-item">Login</a>
+            <a href="/register" class="navbar-item">Register</a>
+          @endloggedIn
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="section">
+    <div class="container">
+      @!section('content')
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
