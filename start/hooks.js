@@ -8,7 +8,7 @@ hooks.after.providersBooted(() => {
     const Exception = use('Exception')
 
     View.global('appUrl', path => {
-        const APP_URL = Env.get('APP_URL')
+        const APP_URL = 'https://git.heroku.com/adonisjs-4-1-auth.git'
 
         return path ? `${APP_URL}/${path}` : APP_URL
     })
